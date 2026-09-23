@@ -1,0 +1,4 @@
+building_id,area_m2,roof_profile,yield_id,scope,district,category,shading_factor
+demo-001,100,flat,reference,main,north,residential,1.0
+demo-002,200,flat,reference,main,south,industrial,0.9
+demo-003,50,slope,reference,reserve,north,residential,0.8

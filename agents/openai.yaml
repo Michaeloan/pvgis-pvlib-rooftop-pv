@@ -1,0 +1,4 @@
+interface:
+  display_name: "PVGIS + pvlib 屋顶光伏计算"
+  short_description: "用网页配置PVGIS与pvlib，绘制比产额和屋顶发电量图表"
+  default_prompt: "使用 $pvgis-pvlib-rooftop-pv，按我提供的地点和系统参数计算并可视化比产额，需要时再汇总建筑屋顶发电量。"

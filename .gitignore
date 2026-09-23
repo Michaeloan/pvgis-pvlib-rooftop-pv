@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.venv/
+.validation-deps/
+*.egg-info/
+.streamlit/secrets.toml
+build/
+dist/
+outputs/
+local/
+.env
+.env.*

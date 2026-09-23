@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pvgis-pvlib-rooftop-pv"
+version = "0.3.0"
+description = "PVGIS and pvlib rooftop PV calculator with a local visualization dashboard and reusable agent skill"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+weather = ["pvlib>=0.11,<0.16", "pandas>=2,<3", "numpy>=1.26,<3", "tzdata>=2024.1"]
+web = ["streamlit>=1.64,<2"]
+
+[project.scripts]
+pvgis-pvlib-pv = "urban_rooftop_pv.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["urban_rooftop_pv*"]

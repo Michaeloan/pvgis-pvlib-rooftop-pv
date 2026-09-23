@@ -1,0 +1,9 @@
+{
+  "schema_version":1,
+  "mode":"pvgis_tmy",
+  "source":"PVGIS 5.3 TMY request, modeled locally with pvlib; see returned metadata",
+  "location":{"latitude":23.13,"longitude":113.26,"altitude_m":20,"timezone":"Asia/Shanghai"},
+  "time":{"year":2025,"interval_minutes":60,"timestamp_position":"start","timezone":"UTC"},
+  "system":{"tilt_deg":20,"azimuth_deg":180,"dc_ac_ratio":1.2,"gamma_pdc":-0.0035,"system_loss_pct":14,"inverter_efficiency":0.96,"transposition":"haydavies","aoi":"physical","temperature_model":"faiman","temperature_parameters":{"u0":25,"u1":6.84},"albedo":0.2},
+  "pvgis":{"api_url":"https://re.jrc.ec.europa.eu/api/v5_3/","start_year":2010,"end_year":2020,"use_horizon":false,"user_horizon_deg":null,"expected_radiation_database":"PVGIS-ERA5","timeout_seconds":60,"cache_csv":"../local/pvgis-tmy-weather.csv","cache_metadata_json":"../local/pvgis-tmy-metadata.json","cache_policy":"fetch_if_missing","roll_utc_offset_hours":0,"output_format":"json"}
+}

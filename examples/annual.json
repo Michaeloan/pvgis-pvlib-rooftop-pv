@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "name": "Synthetic annual demonstration",
+  "notes": "Synthetic teaching inputs; not calibrated Guangzhou or thesis results.",
+  "buildings_csv": "buildings.csv",
+  "columns": {"building_id":"building_id", "area_m2":"area_m2", "roof_profile":"roof_profile", "yield_id":"yield_id", "scope":"scope", "district":"district", "category":"category"},
+  "roof_profiles": {
+    "flat": {"area_mode":"effective_uf", "effective_uf":0.5, "capacity_density_kwp_m2":0.2, "source":"Synthetic demonstration"},
+    "slope": {"area_mode":"components", "usable_fraction":0.8, "packing_fraction":0.9, "surface_multiplier":1.1, "capacity_density_kwp_m2":0.2, "source":"Synthetic demonstration"}
+  },
+  "yields": {"reference":{"mode":"annual", "kwh_per_kwp":1000, "included_effects":["temperature","inverter","system_losses","orientation"], "source":"Synthetic annual AC yield"}},
+  "corrections": [{"effect":"shading", "column":"shading_factor", "source":"Synthetic annual energy retention factors"}],
+  "scope_labels": {"main":"Main assessment", "reserve":"Conditional reserve, separately reported"},
+  "carbon": {"kg_co2_per_kwh":0.4, "factor_year":2025, "source":"Synthetic factor, not a published grid factor"}
+}

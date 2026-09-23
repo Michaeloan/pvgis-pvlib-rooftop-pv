@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "name": "Synthetic hourly weather demonstration",
+  "notes": "Synthetic weather for software demonstration only; not a real typical meteorological year.",
+  "buildings_csv": "buildings.csv",
+  "columns": {"building_id":"building_id", "area_m2":"area_m2", "roof_profile":"roof_profile", "yield_id":"yield_id", "scope":"scope", "district":"district", "category":"category"},
+  "roof_profiles": {
+    "flat": {"area_mode":"effective_uf", "effective_uf":0.5, "capacity_density_kwp_m2":0.2, "source":"Synthetic demonstration"},
+    "slope": {"area_mode":"components", "usable_fraction":0.8, "packing_fraction":0.9, "surface_multiplier":1.1, "capacity_density_kwp_m2":0.2, "source":"Synthetic demonstration"}
+  },
+  "yields": {
+    "reference": {
+      "mode":"weather", "weather_csv":"weather.csv", "source":"Generated synthetic interval-mean irradiance demonstration",
+      "location":{"latitude":23.13,"longitude":113.26,"altitude_m":20,"timezone":"Asia/Shanghai"},
+      "time":{"year":2025,"interval_minutes":60,"timestamp_position":"start","timezone":"Asia/Shanghai"},
+      "system":{"tilt_deg":20,"azimuth_deg":180,"dc_ac_ratio":1.2,"gamma_pdc":-0.0035,"system_loss_pct":14,"inverter_efficiency":0.96,"transposition":"haydavies","aoi":"physical","temperature_model":"faiman","temperature_parameters":{"u0":25,"u1":6.84},"albedo":0.2}
+    }
+  },
+  "corrections":[{"effect":"shading","column":"shading_factor","source":"Synthetic annual energy retention factors"}],
+  "scope_labels":{"main":"Main assessment","reserve":"Conditional reserve, separately reported"}
+}
